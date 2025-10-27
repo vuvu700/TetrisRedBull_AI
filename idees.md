@@ -1,7 +1,7 @@
 
 ## pour la V1: 
 
-basé sur la conception de https://github.com/truonging/Tetris-A.I?tab=readme-ov-file
+basé sur la conception de https://github.com/truonging/Tetris-A.I
 
 on vas utiliser le meme principe de states avec des features calculées sur la grille (on ne donne pas la grille direct)
 on vas par contre utiliser de la planification car on vas avoir une piece en memoire + on connais la prochaine qui est jouable
