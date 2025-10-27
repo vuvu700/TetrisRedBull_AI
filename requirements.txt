@@ -1,0 +1,6 @@
+https://github.com/vuvu700/holo.git@dev
+pillow
+attrs
+pynput
+screeninfo
+numpy
