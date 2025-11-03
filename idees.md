@@ -1,8 +1,9 @@
 
 ## pour la V1: 
 
-basé sur la conception de https://github.com/truonging/Tetris-A.I
+s'inspire en partie de [ce repo git](https://github.com/truonging/Tetris-A.I) pour ne pas reinventer la roue.
 
+## stack technique
 on vas utiliser le meme principe de states avec des features calculées sur la grille (on ne donne pas la grille direct)
 on vas par contre utiliser de la planification car on vas avoir une piece en memoire + on connais la prochaine qui est jouable
 les combinaisons de planif sont donc:
@@ -20,7 +21,15 @@ observations:
  - la next -> elle est toujours distribuée a la meme rotation r0 ! 
     -> on peux donc se contenter de regarder la couleur pour connaitre la piece
 
-deroulé d'une game:
+### la stack IA
+je vais utiliser du Deep TD-Learning pour estimer la value function avec deux models, avec une priorized experiance replay pour diminuer les bias. 
+
+Les etats seront décris par (total_height, bumpiness, holes, line_cleared, y_pos, pillar) provenant du repo d'inspiration, et voir pour rajouter en plus le nb de blocks de la grille par ligne et colones.
+
+
+
+
+## deroulé d'une game:
  - avant le début de la partie (pendent le décompte par exemple):
    - screen de l'ecran -> detecter le btn pause, le cadre de score, le logo redbull (avec img)
    - determiner a partir de ca le rect de la grille et le rect du next (rects précis sans bordures)
